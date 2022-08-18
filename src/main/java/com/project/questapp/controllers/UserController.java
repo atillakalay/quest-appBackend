@@ -40,7 +40,7 @@ public class UserController {
 	@GetMapping("/{userId}")
 	private User getOneUser(@PathVariable Long userId) {
 		// custom exception
-		return userService.getOneUser(userId);
+		return userService.getOneUserById(userId);
 	}
 
 	@PutMapping("/{userId}")
