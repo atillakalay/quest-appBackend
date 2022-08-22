@@ -2,6 +2,8 @@ package com.project.questapp.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -19,6 +21,7 @@ import lombok.Data;
 @Data
 public class Like {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long id;
 
 	@ManyToOne(fetch = FetchType.LAZY)
