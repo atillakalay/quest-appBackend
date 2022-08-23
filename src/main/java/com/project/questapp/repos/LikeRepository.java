@@ -8,8 +8,10 @@ import com.project.questapp.entities.Like;
 
 public interface LikeRepository extends JpaRepository<Like, Long> {
 
-	List<Like> findByUserId(Long long1);
+	List<Like> findByUserIdAndPostId(Long userId, Long postId);
 
-	List<Like> findByPostId(Long long1);
+	List<Like> findByUserId(Long userId);
+
+	List<Like> findByPostId(Long postId);
 
 }
